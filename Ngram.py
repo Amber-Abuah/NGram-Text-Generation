@@ -1,7 +1,11 @@
+import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.lm.preprocessing import padded_everygram_pipeline
 from nltk.lm import MLE
 from nltk.corpus import gutenberg
+
+nltk.download('gutenberg')
+nltk.download('punkt_tab') 
 
 all_text = ""
 for file_id in gutenberg.fileids()[:2]:
